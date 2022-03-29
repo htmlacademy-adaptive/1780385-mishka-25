@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Дмитрий Берестень](https://up.htmlacademy.ru/adaptive/25/user/1780385).
-* Наставник: [Андрей Волошк](https://htmlacademy.ru/profile/id1655583).
+* Наставник: [Андрей Волошко](https://htmlacademy.ru/profile/id1655583).
 
 ---
 
