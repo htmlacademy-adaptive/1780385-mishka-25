@@ -1,12 +1,15 @@
 @import "../variables-mixins.scss";
 
-.section-title {
+.main-title-text {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  color: $second-color;
+
   margin: 0;
 
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
-  color: $second-color;
+  @include general-padding;
 
   @media (min-width: $tablet-width) {
     font-size: 43px;
@@ -16,5 +19,8 @@
   @media (min-width: $desktop-width) {
     font-size: 53px;
     line-height: 57px;
+
+    padding-left: 150px;
+    padding-right: 150px;
   }
 }
