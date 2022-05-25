@@ -24,6 +24,7 @@ export const styles = () => {
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
@@ -70,23 +71,15 @@ const spriter = () => {
     .pipe(gulp.dest('build/img/sprites'));
 }
 
-// Copier fonts
-const fontscopy = (done) => {
+// Copier
+const copy = (done) => {
   gulp.src([
-    'source/fonts/*.{woff2,woff}'
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest',
   ], {
     base: 'source'
   })
-  .pipe(gulp.dest('build'))
-  done();
-}
-
-// Copier somethings
-const copy = (done) => {
-  gulp.src([
-    '*.ico',
-    '*.webmanifest',
-  ])
   .pipe(gulp.dest('build'))
   done();
 }
@@ -119,7 +112,6 @@ const watcher = () => {
 export const build = gulp.series(
   clean,
   copy,
-  fontscopy,
   scripts,
   images,
   webper,
